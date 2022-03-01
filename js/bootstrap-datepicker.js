@@ -115,7 +115,7 @@
 		this.element = $(element);
 		this.isInput = this.element.is('input');
 		this.inputField = this.isInput ? this.element : this.element.find('input');
-		this.component = this.element.hasClass('date') ? this.element.find('.add-on, .input-group-addon, .input-group-append, .input-group-prepend, .btn') : false;
+		this.component = this.element.hasClass('date') ? this.element.find('.add-on, .input-group-addon, .input-group-append, .input-group-prepend, .input-group-text, .btn') : false;
 		if (this.component && this.component.length === 0){
 			this.component = false;
     }
@@ -1486,10 +1486,13 @@
 					this.setValue();
 					this.fill();
 					if (this.picker.is(':visible')){
-						e.preventDefault();
-						e.stopPropagation();
-						if (this.o.autoclose)
+						if (this.o.keyboardNavigation || this.o.autoclose) {
+							e.preventDefault();
+							e.stopPropagation();
+						}
+						if (this.o.autoclose) {
 							this.hide();
+						}
 					}
 					break;
 				case 9: // tab
