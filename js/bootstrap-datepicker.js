@@ -2029,7 +2029,7 @@
 
 	/* DATEPICKER VERSION
 	 * =================== */
-	$.fn.datepicker.version = '1.9.0';
+	$.fn.datepicker.version = '1.9.1';
 
 	$.fn.datepicker.deprecated = function(msg){
 		var console = window.console;

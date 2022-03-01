@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.9.1
+-----
+
+* Support Bootstrap 5 class of `input-group-text` alongside existing backwards-compatibility classes like `input-group-addon`.
+* Allow type-in dates and Return to drop through and submit a form when options `"keyboardNavigation": false` and `"autoclose": false` are set.
+
 1.9.0
 -----
 
