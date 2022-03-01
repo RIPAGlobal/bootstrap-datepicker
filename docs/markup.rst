@@ -19,13 +19,13 @@ The simplest case: focusing the input (clicking or tabbing into it) will show th
 component
 ---------
 
-Adding the ``date`` class to an ``input-group`` bootstrap component will allow the ``input-group-addon`` elements to trigger the picker.
+Adding the ``date`` class to an ``input-group`` bootstrap component will allow the ``input-group-text`` (Bootstrap 5) or ``input-group-addon`` (earlier Bootstrap versions) elements to trigger the picker.
 
 .. code-block:: html
 
     <div class="input-group date">
         <input type="text" class="form-control" value="12-02-2012">
-        <div class="input-group-addon">
+        <div class="input-group-text">
             <span class="glyphicon glyphicon-th"></span>
         </div>
     </div>
@@ -44,7 +44,7 @@ Using the ``input-daterange`` construct with multiple child inputs will instanti
 
     <div class="input-group input-daterange">
         <input type="text" class="form-control" value="2012-04-05">
-        <div class="input-group-addon">to</div>
+        <div class="input-group-text">to</div>
         <input type="text" class="form-control" value="2012-04-19">
     </div>
 
